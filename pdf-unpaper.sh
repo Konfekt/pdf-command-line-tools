@@ -4,7 +4,7 @@
 
 if ! { [ $# -eq 1 ] && [ -f "$1" ]; }; then
 	cat <<HERE 
-	pdf-unpaper - cleanses a scanned monochrome PDF 
+	pdf-unpaper - cleanses a scanned PDF 
 	Usage:  pdf-unpaper <PDF file>
 HERE
 	exit 0;
@@ -15,7 +15,7 @@ opts="-t pbm --overwrite -gs 5,5 -gp 5,5 -gt 0.5"
 echo "Using unpaper options:"
 echo "$opts"
 echo "Converting PDF file to PPM files..."
-pdftoppm -mono "$1" scan
+pdftoppm "$1" scan
 
 echo "Renaming files for unpaper consumption..."
 nmb=1
