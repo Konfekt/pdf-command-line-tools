@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # exit on error or use of undeclared variable: set -eu
 set -o errtrace -o nounset
