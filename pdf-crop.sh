@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 command -v pdf-crop-margins >/dev/null 2>&1 || exit 1
 
